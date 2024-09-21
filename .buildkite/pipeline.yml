@@ -12,3 +12,15 @@ steps:
     plugins:
       - shellcheck#v1.3.0:
           files: hooks/**
+          
+  - label: ":hammer: Tests"
+    plugins:
+      - docker#v3.5.0:
+          image: "ubuntu"
+          user: "root"
+    command: |
+      #!/bin/bash
+      set -euo pipefail
+      export USER="JohnDoe"
+      export PASSWORD="Welcome@123"
+      echo $USER $PASSWORD
