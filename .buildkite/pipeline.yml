@@ -13,14 +13,7 @@ steps:
       - shellcheck#v1.3.0:
           files: hooks/**
           
-  - label: ":hammer: Tests"
+  - label: "🤡 : Detect clown plugin"
     plugins:
-      - docker#v3.5.0:
-          image: "ubuntu"
-          user: "root"
-    command: |
-      #!/bin/bash
-      set -euo pipefail
-      export USER="JohnDoe"
-      export PASSWORD="Welcome@123"
-      echo $USER $PASSWORD
+      - detect-clowns:v1.0.0: ~
+
