@@ -16,6 +16,8 @@ steps:
   - label: "🤡 : Detect clown plugin"
     command: |
       echo "starting detect clown plugin"
+    env:
+      BUILDKITE_BUILD_CHECKOUT_PATH: "$BUILDKITE_BUILD_CHECKOUT_PATH"
     plugins:
       - detect-clowns#v2.0.0: ~
 
