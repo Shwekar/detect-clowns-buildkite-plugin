@@ -14,6 +14,8 @@ steps:
           files: hooks/**
           
   - label: "🤡 : Detect clown plugin"
+    command: |
+      echo "starting detect clown plugin"
     plugins:
       - detect-clowns:v1.0.0: ~
 
