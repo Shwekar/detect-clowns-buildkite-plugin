@@ -17,5 +17,5 @@ steps:
     command: |
       echo "starting detect clown plugin"
     plugins:
-      - detect-clowns:v2.0.0: ~
+      - detect-clowns#v2.0.0: ~
 
